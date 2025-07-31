@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URGENT 2KAY: Revolutionizing Bill Payment Through Smart Bundling</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: black;
+      background-color: #ececec;
+    }
+    
+    .container {
+      max-width: 95%;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* Header */
+    header {
+      background-color: black;
+      color: #ececec;
+      padding: 2rem 0;
+    }
+    
+    .header-content {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    
+    .logo {
+      color: white;
+      font-size: 1.5rem;
+      font-family: 'great vibes', cursive;
+      font-weight: bold;
+      white-space: nowrap;
+      letter-spacing: 2px;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      padding: 0;
+    }
+    
+    .title-section {
+      flex: 1;
+      display: inline-block;
+      text-align: center;
+    }
+    
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: #db0746;
+      justify-content: center;
+    }
+    
+    .subtitle {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+    
+    .overview {
+      font-size: 0.9rem;
+    }
+    
+    /* Main Content */
+    main {
+      padding: 3rem 0;
+    }
+    
+    section {
+      margin-bottom: 3rem;
+    }
+    
+    h2 {
+      color: #db0746;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #db0746;
+      padding-bottom: 0.5rem;
+    }
+    
+    h3 {
+      color: black;
+      font-size: 1.3rem;
+      margin: 2rem 0 1rem 0;
+    }
+    
+    h4 {
+      color: #db0746;
+      font-size: 1.1rem;
+      margin: 1.5rem 0 0.5rem 0;
+    }
+    
+    p {
+      margin-bottom: 1rem;
+    }
+    
+    ul {
+      margin: 1rem 0;
+      padding-left: 2rem;
+    }
+    
+    li {
+      margin-bottom: 0.5rem;
+    }
+    
+    .quote {
+      background-color: #db0746;
+      color: #ececec;
+      padding: 1rem;
+      margin: 1rem 0;
+      font-style: italic;
+    }
+    
+    .highlight {
+      background-color: black;
+      color: #ececec;
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+    
+    .metrics {
+      background-color: black;
+      color: #ececec;
+      padding: 1.5rem;
+      margin: 1rem 0;
+    }
+    
+    .metrics strong {
+      color: #db0746;
+      font-size: 1.2rem;
+    }
+
+    a {
+      color: white;
+      transition: color 0.3s;
+    }
+
+    a:hover {
+      color: #db0746;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      background-color: #ececec;
+    }
+    
+    th {
+      background-color: #db0746;
+      color: #ececec;
+      padding: 1rem;
+      text-align: left;
+    }
+    
+    td {
+      padding: 1rem;
+      border-bottom: 1px solid black;
+    }
+    
+    /* Footer */
+    footer {
+      background-color: black;
+      color: #ececec;
+      text-align: center;
+      padding: 2rem 0;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 15px;
+      }
+      
+      .header-content {
+        gap: 1rem;
+      }
+
+      .logo {
+        font-size: 1.3rem;
+        top: 0;
+        left: 0;
+      }
+      
+      h1 {
+        font-size: 1.5rem;
+      }
+      
+      .subtitle {
+        font-size: 0.9rem;
+      }
+      
+      .overview {
+        font-size: 0.8rem;
+      }
+      
+      h2 {
+        font-size: 1.5rem;
+      }
+      
+      h3 {
+        font-size: 1.2rem;
+      }
+      
+      .image-placeholder {
+        height: 200px;
+        font-size: 1rem;
+      }
+      
+      table {
+        font-size: 0.9rem;
+      }
+      
+      th, td {
+        padding: 0.5rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 10px;
+      }
+      
+      .header-content {
+        gap: 0.5rem;
+      }
+      
+      .logo {
+        font-size: 1rem;
+        top: 0;
+        left: 0;
+        letter-spacing: 1px;
+      }
+      
+      h1 {
+        font-size: 1.3rem;
+      }
+      
+      .subtitle {
+        font-size: 0.8rem;
+      }
+      
+      .overview {
+        font-size: 0.7rem;
+      }
+      
+      h2 {
+        font-size: 1.3rem;
+      }
+      
+      h3 {
+        font-size: 1.1rem;
+      }
+      
+      .image-placeholder {
+        height: 150px;
+        font-size: 0.9rem;
+      }
+      
+      table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">Michelle Amanze</div>
+        <div class="title-section">
+          <h1>URGENT 2KAY</h1>
+          <p class="subtitle">Revolutionizing Bill Payment Through Smart Bundling</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+        <div class="overview">
+            <p><strong>Role:</strong> Product Manager <br><strong>Duration:</strong> 4 weeks (April 21 - May 16, 2025) <br><strong>Team Size:</strong> 24 members</p>
+          </div>
+      
+      <section>
+        <h2>Project Overview</h2>
+        <p>URGENT 2KAY is a fintech web application that enables users to bundle multiple bills and financial needs into a single request. Upon acceptance, the platform automatically disburses payments directly to service providers, removing intermediary cash handling and providing complete transparency.</p>
+        
+        <div class="metrics">
+          <p><strong>Duration:</strong> 4 weeks development cycle</p>
+          <p><strong>Team Size:</strong> 24 cross-functional members</p>
+          <p><strong>Beta Testing:</strong> 5+ external users</p>
+          <p><strong>Live Application:</strong> <a href="https://urgent2kays.netlify.app/" target="_blank">https://urgent2kays.netlify.app/</a></p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Problem Statement</h2>
+        <p>Bill payment remains fragmented and inefficient, particularly when individuals need financial assistance across multiple expenses. Traditional payment apps only facilitate direct person-to-person transfers without visibility into fund allocation, creating friction in family and relationship dynamics around financial support.</p>
+      </section>
+
+      <section>
+        <h2>Solution</h2>
+        <p>URGENT 2KAY addresses these challenges through smart bundling technology that allows users to:</p>
+        
+        <ul>
+          <li>Aggregate multiple bills into single payment requests</li>
+          <li>Provide complete transparency in fund allocation</li>
+          <li>Enable direct payments to service providers</li>
+          <li>Remove cash handling intermediaries</li>
+          <li>Maintain relationship trust through verified transactions</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Target Users</h2>
+        
+        <h3>Primary Users</h3>
+        <div class="highlight">
+          <h4>Bill Owners:</h4>
+          <p>Students, partners, dependents seeking assistance with multiple expenses</p>
+          
+          <h4>Bill Sponsors:</h4>
+          <p>Parents, partners, relatives willing to cover others' expenses</p>
+        </div>
+        
+        <h3>Secondary Users</h3>
+        <ul>
+          <li><strong>Service Providers:</strong> Utilities, educational institutions, merchants</li>
+          <li><strong>Expense Managers:</strong> Users coordinating financial responsibilities across relationships</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Key Features Delivered</h2>
+        
+        <h3>Smart Request Bundling</h3>
+        <ul>
+          <li>Multi-provider bill aggregation in single requests</li>
+          <li>E-commerce cart integration from major platforms</li>
+          <li>Priority-based expense categorization</li>
+          <li>Contextual notes for expense justification</li>
+        </ul>
+        
+        <h3>Streamlined Request Management</h3>
+        <ul>
+          <li>Organized bill bundle creation with detailed breakdowns</li>
+          <li>Branded request delivery system</li>
+          <li>Real-time status tracking (pending, accepted, rejected)</li>
+          <li>Recurring bundle scheduling for predictable expenses</li>
+        </ul>
+        
+        <h3>Direct Provider Payments</h3>
+        <ul>
+          <li>Instant disbursement upon request acceptance</li>
+          <li>Real-time payment confirmation notifications</li>
+          <li>Digital receipt generation</li>
+          <li>Payment verification through provider API integrations</li>
+        </ul>
+        
+        <h3>Relationship Management</h3>
+        <ul>
+          <li>Profile creation for different financial relationships</li>
+          <li>Spending limits and approval rules configuration</li>
+          <li>Payment history organization by relationship type</li>
+          <li>Contribution tracking and acknowledgment features</li>
+        </ul>
+        
+        <h3>Transparency Tools</h3>
+        <ul>
+          <li>Visual fund allocation breakdowns</li>
+          <li>Expense verification through provider connections</li>
+          <li>Spending category analysis and trend reporting</li>
+          <li>Budget planning and forecasting capabilities</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Product Development Process</h2>
+        
+        <h3>Week 1: Foundation (50% Designs + Documentation + Setup)</h3>
+        <ul>
+          <li>Conducted design sprint to finalize 50% of high-fidelity screens</li>
+          <li>Established brand guidelines and UI component library</li>
+          <li>Created and obtained stakeholder sign-off on PRD and TRD</li>
+          <li>Developed database schema and API endpoint specifications</li>
+          <li>Set up development infrastructure with CI/CD pipeline</li>
+        </ul>
+        
+        <div class="highlight">
+          <h4>Key Deliverables:</h4>
+          <ul>
+            <li>50% Hi-Fi screens in Figma</li>
+            <li>Approved PRD/TRD documentation</li>
+            <li>GitHub repository with frontend skeleton</li>
+          </ul>
+        </div>
+        
+        <h3>Week 2: Implementation (100% Frontend + 50% API + Final Designs)</h3>
+        <ul>
+          <li>Completed remaining UI designs with responsive states</li>
+          <li>Implemented all frontend screens matching Figma specifications</li>
+          <li>Developed 50% of backend API endpoints</li>
+          <li>Established database connections and initial integrations</li>
+        </ul>
+        
+        <div class="highlight">
+          <h4>Key Deliverables:</h4>
+          <ul>
+            <li>Complete high-fidelity design system</li>
+            <li>All frontend screens implemented</li>
+            <li>50% API endpoints documented in Swagger</li>
+          </ul>
+        </div>
+        
+        <h3>Week 3: Integration and Testing (Product Completion)</h3>
+        <ul>
+          <li>Completed remaining API endpoints and database integration</li>
+          <li>Conducted comprehensive internal QA across all user flows</li>
+          <li>Executed external user testing with 5+ beta users</li>
+          <li>Implemented critical path bug fixes based on feedback</li>
+        </ul>
+        
+        <div class="highlight">
+          <h4>Key Deliverables:</h4>
+          <ul>
+            <li>100% functional product</li>
+            <li>Test report documenting major issues and resolutions</li>
+            <li>User feedback synthesis and action plan</li>
+          </ul>
+        </div>
+        
+        <h3>Week 4: Polish and Launch Preparation</h3>
+        <ul>
+          <li>Resolved all P1/P2 bugs identified during testing</li>
+          <li>Optimized application performance and load times</li>
+          <li>Created demo video and presentation materials</li>
+          <li>Conducted team dry run and final preparations</li>
+        </ul>
+        
+        <div class="highlight">
+          <h4>Key Deliverables:</h4>
+          <ul>
+            <li>Production-ready deployed application</li>
+            <li>Demo video and slide deck for stakeholder presentation</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Team Structure</h2>
+        <p>Cross-functional team of 24 members:</p>
+        
+        <div class="highlight">
+          <ul>
+            <li>8 Product Designers</li>
+            <li>5 Frontend Developers</li>
+            <li>4 Backend Developers</li>
+            <li>1 QA Analyst</li>
+            <li>3 Data Analysts</li>
+            <li>1 Digital Marketer</li>
+            <li>2 Product Managers</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Key Learnings and Iterations</h2>
+        
+        <h3>User Feedback Integration</h3>
+        <p>During beta testing, users requested enhanced notification controls to balance urgency without creating pressure. We implemented customizable notification settings and introduced "gentle reminder" options for sponsors.</p>
+        
+        <h3>Technical Challenges</h3>
+        <p>Provider API integrations required more extensive error handling than initially planned. We developed robust fallback mechanisms and improved user communication around payment status updates.</p>
+        
+        <h3>Team Collaboration</h3>
+        <p>Leading a cross-functional team through a compressed timeline required daily standups and clear milestone definitions. The structured weekly goal approach proved effective for maintaining momentum while ensuring quality deliverables.</p>
+      </section>
+
+      <section>
+        <h2>Future Roadmap</h2>
+        <p>Based on initial user feedback and market research, identified expansion opportunities include:</p>
+        
+        <ul>
+          <li>Medical expense bundling capabilities</li>
+          <li>Investment contribution coordination</li>
+          <li>Educational savings plan integration</li>
+          <li>Institutional support system partnerships</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Results and Impact</h2>
+        
+        <div class="metrics">
+          <p><strong>Development Time:</strong> 4 weeks from concept to production</p>
+          <p><strong>Team Coordination:</strong> 24 members across multiple disciplines</p>
+          <p><strong>User Testing:</strong> 5+ beta users with iterative feedback integration</p>
+          <p><strong>Technical Achievement:</strong> Full-stack fintech application with API integrations</p>
+        </div>
+        
+        <div class="highlight">
+          <h4>Live Application:</h4>
+          <p><strong>URL:</strong> <a href="https://urgent2kays.netlify.app/" target="_blank">https://urgent2kays.netlify.app/</a></p>
+          <p><strong>Status:</strong> Production-ready with ongoing user acquisition</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Supporting Documentation</h2>
+        
+        <div class="highlight">
+          <h4>Project Artifacts:</h4>
+          <ul>
+            <li><a href="https://app.clickup.com/9012899344/v/dc/8ckbvgg-52" target="_blank">Product Requirements Document (PRD)</a></li>
+            <li><a href="https://app.clickup.com/9012899344/docs/8ckbvgg-432/8ckbvgg-452" target="_blank">Problem Definition & Solution Mapping</a></li>
+            <li><a href="https://app.clickup.com/9012899344/docs/8ckbvgg-252/8ckbvgg-272" target="_blank">Communication Handbook</a></li>
+            <li><a href="https://app.clickup.com/9012899344/docs/8ckbvgg-352/8ckbvgg-372" target="_blank">Competitive Analysis & Market Research</a></li>
+          </ul>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Michelle Amanze</p>
+    </div>
+  </footer>
+</body>
+</html>

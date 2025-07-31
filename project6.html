@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TruthCheck: Combating Misinformation in Nigeria</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: black;
+      background-color: #ececec;
+    }
+    
+    .container {
+      max-width: 95%;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* Header */
+    header {
+      background-color: black;
+      color: #ececec;
+      padding: 2rem 0;
+    }
+    
+    .header-content {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    
+    .logo {
+      color: white;
+      font-size: 1.5rem;
+      font-family: 'great vibes', cursive;
+      font-weight: bold;
+      white-space: nowrap;
+      letter-spacing: 2px;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      padding: 0;
+    }
+    
+    .title-section {
+      flex: 1;
+      display: inline-block;
+      text-align: center;
+    }
+    
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: #db0746;
+      justify-content: center;
+    }
+    
+    .subtitle {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+    
+    .overview {
+      font-size: 0.9rem;
+    }
+    
+    /* Main Content */
+    main {
+      padding: 3rem 0;
+    }
+    
+    section {
+      margin-bottom: 3rem;
+    }
+    
+    h2 {
+      color: #db0746;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #db0746;
+      padding-bottom: 0.5rem;
+    }
+    
+    h3 {
+      color: black;
+      font-size: 1.3rem;
+      margin: 2rem 0 1rem 0;
+    }
+    
+    h4 {
+      color: #db0746;
+      font-size: 1.1rem;
+      margin: 1.5rem 0 0.5rem 0;
+    }
+    
+    p {
+      margin-bottom: 1rem;
+    }
+    
+    ul {
+      margin: 1rem 0;
+      padding-left: 2rem;
+    }
+    
+    li {
+      margin-bottom: 0.5rem;
+    }
+    
+    .quote {
+      background-color: #db0746;
+      color: #ececec;
+      padding: 1rem;
+      margin: 1rem 0;
+      font-style: italic;
+    }
+    
+    .highlight {
+      background-color: black;
+      color: #ececec;
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+    
+    .metrics {
+      background-color: black;
+      color: #ececec;
+      padding: 1.5rem;
+      margin: 1rem 0;
+    }
+    
+    .metrics strong {
+      color: #db0746;
+      font-size: 1.2rem;
+    }
+
+    .attachment {
+      font-style: italic;
+      margin: 1rem 0;
+    }
+
+    .attachment a {
+        color: #db0746;
+    }
+
+    a {
+      color: #db0746;
+      transition: color 0.3s;
+    }
+
+    a:hover {
+      color: #ececec;
+    }
+    
+    /* Image placeholders */
+    .image-placeholder img {
+      width: 500px;
+      height: 300px;
+      object-fit: contain;
+      display: block;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      padding: 0.5rem;
+    }
+    
+    .image-caption {
+      font-style: italic;
+      color: #db0746;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      background-color: #ececec;
+    }
+    
+    th {
+      background-color: #db0746;
+      color: #ececec;
+      padding: 1rem;
+      text-align: left;
+    }
+    
+    td {
+      padding: 1rem;
+      border-bottom: 1px solid black;
+    }
+    
+    /* Footer */
+    footer {
+      background-color: black;
+      color: #ececec;
+      text-align: center;
+      padding: 2rem 0;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 15px;
+      }
+      
+      .header-content {
+        gap: 1rem;
+      }
+
+      .logo {
+        font-size: 1.3rem;
+        top: 0;
+        left: 0;
+      }
+      
+      h1 {
+        font-size: 1.5rem;
+      }
+      
+      .subtitle {
+        font-size: 0.9rem;
+      }
+      
+      .overview {
+        font-size: 0.8rem;
+      }
+      
+      h2 {
+        font-size: 1.5rem;
+      }
+      
+      h3 {
+        font-size: 1.2rem;
+      }
+
+      .image-placeholder img {
+        width: 90%;
+        height: auto;
+      }
+      
+      table {
+        font-size: 0.9rem;
+      }
+      
+      th, td {
+        padding: 0.5rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 10px;
+      }
+      
+      .header-content {
+        gap: 0.5rem;
+      }
+      
+      .logo {
+        font-size: 1rem;
+        top: 0;
+        left: 0;
+        letter-spacing: 1px;
+      }
+      
+      h1 {
+        font-size: 1.3rem;
+      }
+      
+      .subtitle {
+        font-size: 0.8rem;
+      }
+      
+      .overview {
+        font-size: 0.7rem;
+      }
+      
+      h2 {
+        font-size: 1.3rem;
+      }
+      
+      h3 {
+        font-size: 1.1rem;
+      }
+
+      .image-placeholder img {
+        width: 100%;
+        height: auto;
+        padding: 0.3rem;
+      }
+      
+      table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">Michelle Amanze</div>
+        <div class="title-section">
+          <h1>TruthCheck: Combating Misinformation in Nigeria</h1>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+        <p class="subtitle">Information Verification & Media Technology Solution</p>
+          <div class="overview">
+            <strong>Role:</strong> Product Owner/Manager <br><strong>Duration:</strong> 5-day sprint (April 2025) <br><strong>Team Size:</strong> 24 cross-functional members
+          </div>
+      
+      <section>
+        <h2>Project Overview</h2>
+        <p>Led the development of TruthCheck, a web application designed to empower Nigerian citizens with quick information verification capabilities. The solution focused on delivering a robust Quick Check Tool that enables users to verify news, images, and claims through an intuitive interface optimized for entry-level smartphones.</p>
+        
+        <div class="metrics">
+          <p><strong>Industry:</strong> Information Verification & Media Technology</p>
+          <p><strong>Target Users:</strong> Nigerian citizens with varying digital literacy levels</p>
+          <p><strong>Primary Goal:</strong> Combat misinformation affecting public health and democratic processes</p>
+          <p><strong>Technical Focus:</strong> Mobile-first design for entry-level smartphones</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Problem Statement</h2>
+        <p>Nigeria faces a critical misinformation crisis affecting public health, security, and democratic processes. With high mobile penetration but varying digital literacy levels, citizens lack accessible tools to verify information authenticity. The challenge was particularly acute during breaking news events where speed and accuracy requirements often conflict.</p>
+        
+        <h4>Key Challenges:</h4>
+        <ul>
+          <li>High mobile penetration with low digital literacy levels</li>
+          <li>Lack of accessible information verification tools</li>
+          <li>Speed vs. accuracy conflict during breaking news events</li>
+          <li>Limited access to credible fact-checking resources</li>
+        </ul>
+
+        <div class="attachment"><i>Problem Definition & Solution Mapping:</i> <a href="https://app.clickup.com/9012874186/docs/8ckb2ya-2872/8ckb2ya-792" target="_blank">Problem Definition & Solution Mapping</a></div>
+      </section>
+
+      <section>
+        <h2>My Role & Responsibilities</h2>
+        
+        <p>As Product Manager/Owner, I:</p>
+        
+        <div class="highlight">
+          <ul>
+            <li>Conducted stakeholder analysis and requirement gathering across diverse user groups</li>
+            <li>Led a cross-functional team including designers, developers (frontend/backend), QA analyst, data analysts, and digital marketer</li>
+            <li>Facilitated daily scrum meetings and sprint planning sessions</li>
+            <li>Created and maintained product vision board and feature backlog</li>
+            <li>Managed project scope and timeline within the 5-day sprint constraint</li>
+            <li>Coordinated deliverables and ensured alignment with project objectives</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Process & Methodology</h2>
+        
+        <h3>Framework</h3>
+        <div class="quote">
+          <p><strong>Methodology:</strong> Agile Scrum methodology</p>
+          <p><strong>Tools:</strong> ClickUp for project management and task tracking</p>
+        </div>
+
+        <div class="image-placeholder">
+          <img src="Project 6/1.png">
+        </div>
+        <p class="image-caption">ClickUp Workspace</p>
+
+        <h3>Sprint Breakdown</h3>
+        <ul>
+          <li><strong>Day 1:</strong> Project kickoff, RFC creation, sprint planning, and backlog prioritization</li>
+          <li><strong>Days 2-4:</strong> Concurrent design and development with daily standups</li>
+          <li><strong>Day 5:</strong> Final implementation and solution presentation</li>
+        </ul>
+
+        <h4>Key Process Decisions:</h4>
+        <ul>
+          <li>Prioritized single robust feature over multiple incomplete features</li>
+          <li>Implemented mobile-first design approach for smartphone compatibility</li>
+          <li>Established clear success metrics for verification accuracy and user adoption</li>
+        </ul>
+
+        <div class="attachment"><i>User Research Insights:</i> <a href="https://app.clickup.com/9012874186/docs/8ckb2ya-1892/8ckb2ya-472" target="_blank">User Research Insights</a></div>
+      </section>
+
+      <section>
+        <h2>Solution</h2>
+        
+        <h3>Primary Feature: Quick Check Tool</h3>
+        <ul>
+          <li>Real-time information verification for text, images, and claims</li>
+          <li>Optimized for low-bandwidth environments</li>
+          <li>Multi-language support for Nigerian linguistic diversity</li>
+          <li>Simple three-step verification process</li>
+        </ul>
+
+        <h3>Supporting Features</h3>
+        <div class="highlight">
+          <ul>
+            <li>User reporting mechanism for potential misinformation</li>
+            <li>Educational resources for information literacy</li>
+            <li>Integration with credible fact-checking sources</li>
+          </ul>
+        </div>
+
+        <div class="attachment"><i>Product Requirements Document (PRD):</i> <a href="https://app.clickup.com/9012874186/docs/8ckb2ya-2232/8ckb2ya-612" target="_blank">Product Requirements Document (PRD)</a></div>
+        <div class="attachment"><i>RFC- Quick Check Tool:</i> <a href="https://app.clickup.com/9012874186/docs/8ckb2ya-1892/8ckb2ya-472" target="_blank">RFC- Quick Check Tool</a></div>
+      </section>
+
+      <section>
+        <h2>Challenges & Solutions</h2>
+        
+        <h4>Challenge 1: Balancing speed vs. accuracy in verification</h4>
+        <p><strong>Solution:</strong> Implemented tiered verification system with confidence levels and source transparency</p>
+        
+        <h4>Challenge 2: Limited access to official verification databases</h4>
+        <p><strong>Solution:</strong> Created hybrid approach combining automated checks with crowd-sourced verification</p>
+      </section>
+
+      <section>
+        <h2>Results & Impact</h2>
+        
+        <h3>Sprint Deliverables</h3>
+        <div class="metrics">
+          <p><strong>Delivery Status:</strong> Fully functional web application delivered on schedule</p>
+          <p><strong>Documentation:</strong> Complete technical documentation and design specifications</p>
+          <p><strong>Stakeholder Feedback:</strong> Positive validation from fact-checking partners</p>
+          <p><strong>Value Proposition:</strong> Clear solution for addressing Nigeria's misinformation challenges</p>
+        </div>
+
+        <h3>Key Metrics Framework</h3>
+        <ul>
+          <li>User verification accuracy rate</li>
+          <li>Time-to-verification performance</li>
+          <li>User engagement and retention rates</li>
+          <li>Content reporting and moderation effectiveness</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Lessons Learned</h2>
+        
+        <ul>
+          <li><strong>Feature Prioritization:</strong> Sprint constraints reinforced the importance of ruthless feature prioritization</li>
+          <li><strong>Cross-functional Collaboration:</strong> Cross-functional collaboration was critical for rapid iteration and problem-solving</li>
+          <li><strong>User-Centric Design:</strong> User-centric design principles were essential for creating accessible verification tools</li>
+          <li><strong>Clear Communication:</strong> Clear communication channels prevented scope creep and maintained team alignment</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Next Steps & Future Roadmap</h2>
+        
+        <h3>Immediate Priorities</h3>
+        <div class="highlight">
+          <ul>
+            <li>User testing and feedback incorporation</li>
+            <li>Performance optimization for broader device compatibility</li>
+            <li>Partnership development with Nigerian fact-checking organizations</li>
+          </ul>
+        </div>
+
+        <h3>Long-term Vision</h3>
+        <ul>
+          <li>Integration with major social media platforms</li>
+          <li>Advanced AI-powered verification capabilities</li>
+          <li>Community-driven verification network</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Project Status</h2>
+        
+        <div class="highlight">
+          <p><strong>Status:</strong> Successfully delivered and launched</p>
+          <p><strong>Live Application:</strong> <a href="https://truthcheck.netlify.app/" target="_blank">https://truthcheck.netlify.app/</a></p>
+          <p><strong>Key Achievement:</strong> Delivered comprehensive misinformation verification solution within 5-day sprint timeline</p>
+          <p><strong>Impact:</strong> Empowered Nigerian citizens with accessible tools for information verification</p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Michelle Amanze</p>
+    </div>
+  </footer>
+</body>
+</html>

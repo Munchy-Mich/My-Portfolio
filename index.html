@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michelle Amanze's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/all.css">
+</head>
+<body>
+   <header>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="michelle_amanze_logo.svg">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="https://hashnode.com/@MichelleSpeaks" target="_blank">Blog</a></li>
+                    <li><a href="https://drive.google.com/file/d/12M3MzIQzAjePqMdMZ_Z1BnarLJGPNtzD/view?usp=drivesdk" onclick="downloadResume()">Resume</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="nav-mobile" id="mobileNav">
+            <ul>
+                <li><a href="#home" onclick="closeMobileMenu()">Home</a></li>
+                <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
+                <li><a href="#projects" onclick="closeMobileMenu()">Projects</a></li>
+                <li><a href="#skills" onclick="closeMobileMenu()">Skills</a></li>
+                <li><a href="https://hashnode.com/@MichelleSpeaks" target="_blank">Blog</a></li>
+                <li><a href="https://drive.google.com/file/d/12M3MzIQzAjePqMdMZ_Z1BnarLJGPNtzD/view?usp=drivesdk" onclick="downloadResume()">Resume</a></li>
+            </ul>
+        </div>
+    </header>
+    <main id="mainContent">
+        <section id="home">
+            <div class="container">
+                <div class="home-content">
+                    <div class="intro">
+                        <h1>Hello, I'm Michelle</h1>
+                        <span>Associate Product Manager.</span>
+                        <p>I love creating products that solve real problems.</p>
+                        <a href="mailto:michelleamanze@gmail.com" class="cta-button" target="_blank">Let's Talk</a>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="5d896852-4c16-4313-98dd-a468f78bbcb5.JPG" alt="Michelle Amanze" />
+                    </div>
+                </div>
+            </div>
+        </section>
+    <section id="about">
+            <div class="container">
+                <div class="about-content">
+                    <h2>About Me</h2>
+                    <div class="about-text" id="aboutText">
+                        <p>As an Associate Product Manager with a passion for innovation and user experience, I bring a unique blend of strategic thinking and creative problem-solving to every project. My journey in product management began with a deep curiosity about how technology can solve real-world problems and improve people's lives.</p>
+                        
+                        <p>My approach centers on gathering detailed requirements, facilitating cross-functional collaboration, and delivering solutions that genuinely address user needs. I believe in data-driven decision making combined with empathetic user research to create products that make a meaningful impact.</p>
+                        
+                        <p>Through comprehensive product management training and hands-on projects, I bring strong capabilities in user research, workflow analysis, stakeholder management, and cross-functional coordination. I excel at translating complex requirements into actionable strategies while maintaining a data-driven yet empathetic approach that keeps users at the center of every decision.</p>
+                        
+                        <p>I'm particularly passionate about emerging technologies and their potential to transform industries. Whether it's exploring the applications of AI in product development, understanding the implications of new regulations on product strategy, or identifying opportunities in untapped markets, I'm always looking for ways to push the boundaries of what's possible.</p>
+                        
+                        <p><strong>Education & Professional Development:</strong> I hold a Bachelor of Science in Applied Microbiology and Brewing from Nnamdi Azikiwe University, Awka, which provided strong analytical and research skills. Recently, I completed the Learnable Product Management Internship from Genesys (2025), gaining comprehensive training in modern product management methodologies, user experience design, and agile development practices. I also earned Project Management Fundamentals certification from the British Project Management Academy (2019) and Proficiency in Management from the Nigerian Institute of Management (Chartered) (2019). This combination of scientific education and specialized training has equipped me with both analytical rigor and practical management skills essential for effective product management.</p>
+                    </div>
+                    <div class="button-wrapper">
+                        <button class="read-more-btn" onclick="toggleAboutText()">Read More</button>
+                    </div> 
+                </div>
+            </div>
+        </section>
+        <section id="projects">
+            <div class="container">
+                <div class="projects-content">
+                    <h2>My Projects</h2>
+                    <div class="projects-grid">
+                        <div class="project-card" onclick="showProjectDetail('E-commerce Mobile App')">
+                            <div class="project-image">
+                                <img src="pivot.png" alt="The Pivot Ng">
+                            </div>
+                            <h3>The Pivot Nigeria Dual Website</h3>
+                            <p>Led a 14-person cross-functional team to deliver two responsive websites in one week for a civic movement. Used phased delivery to complete both sites ahead of schedule while meeting all stakeholder requirements for 3,000+ MSMEs and African changemakers.</p>
+                            <a href="project1.html" class="view-case-study" target="_blank">View Case Study</a>
+                        </div>
+                        
+                        <div class="project-card" onclick="showProjectDetail('SaaS Dashboard Redesign')">
+                            <div class="project-image">
+                                <img src="Project 2/main.png" alt="FlatShare">
+                            </div>
+                            <h3>FlatShare Housing Marketplace</h3>
+                            <p>Conceptualized a digital housing solution for Abuja after researching 82+ users and finding 78% spend over half their income on housing. Created an MVP with 87% user appeal that validates 40% cost savings through shared accommodations.</p>
+                            <a href="project2.html" class="view-case-study" target="_blank">View Case Study</a>
+                        </div>
+                        
+                        <div class="project-card" onclick="showProjectDetail('AI-Powered Analytics Tool')">
+                            <div class="project-image">
+                                <img src="Project 3/main.png">
+                            </div>
+                            <h3>Facebook Feed Toggle Redesign</h3>
+                            <p>Designed a dual-feed toggle system to reduce newsfeed clutter, projected to increase engagement by 18%. Conducted post-launch analysis using mock data, revealing user segment disparities and led a follow-up sprint for inclusive solutions.</p>
+                            <a href="project3.html" class="view-case-study" target="_blank">View Case Study</a>
+                        </div>
+                        
+                        <div class="project-card" onclick="showProjectDetail('Customer Onboarding Platform')">
+                            <div class="project-image">
+                                <img src="Project 4/Display.png" alt="ShantyBay">
+                            </div>
+                            <h3>ShantyBay Retail Marketplace</h3>
+                            <p>Created a detailed product concept for a mobile-first marketplace for Nigerian small retailers after identifying 40% revenue losses from manual processes. Achieved 63% increase in vendor trust and 2.5x higher purchase intent through user-centered design.</p>
+                            <a href="project4.html" class="view-case-study" target="_blank">View Case Study</a>
+                        </div>
+                        
+                        <div class="project-card" onclick="showProjectDetail('Multi-tenant CRM System')">
+                            <div class="project-image">
+                                <img src="Urgent 2k.png" alt="Urgent 2KAY">
+                            </div>
+                            <h3>URGENT 2KAY Fintech Platform</h3>
+                            <p>Led 24-person team through 4-week sprint to build bill bundling platform from concept to production. Delivered MVP with API integrations and automated payments, incorporating feedback from 5+ beta users across weekly milestones.</p>
+                            <a href="project5.html" class="view-case-study" target="_blank">View Case Study</a>
+                        </div>
+                        
+                        <div class="project-card" onclick="showProjectDetail('IoT Device Management Portal')">
+                            <div class="project-image">
+                                <img src="TruthCheck.jpg" alt="TruthCheck">
+                            </div>
+                            <h3>TruthCheck Verification Platform</h3>
+                            <p>Led a cross-fuctional team to build an information verification tool for Nigerian citizens through 5-day agile sprint. Delivered mobile-first Quick Check Tool with tiered validation system and multi-language support, balancing speed with accuracy.</p>
+                            <a href="project6.html" class="view-case-study" target="_blank">View Case Study</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="skills">
+            <div class="container">
+                <div class="skills-content">
+                    <h2>My Skills</h2>
+                    <div class="skills-box">
+                        <div class="skills-toggle">
+                            <div class="big-toggle" id="customToggle">
+                                <div class="toggle-slider" id="toggleSlider"></div>
+                                <div class="toggle-option" id="labelDo">What I Do</div>
+                                <div class="toggle-option" id="labelUse">What I Use</div>
+                            </div>
+                        </div>
+
+                        <div class="skills-list" id="skillsList">
+                            <!-- Default content: What I Do -->
+                            <div class="skill-item"><i class="fas fa-lightbulb"></i> Product Strategy</div>
+                            <div class="skill-item"><i class="fas fa-magnifying-glass"></i> User Research</div>
+                            <div class="skill-item"><i class="fas fa-object-group"></i> UX Design</div>
+                            <div class="skill-item"><i class="fas fa-rotate"></i> Agile Methodology</div>
+                            <div class="skill-item"><i class="fas fa-chart-line"></i> Data Analysis</div>
+                            <div class="skill-item"><i class="fas fa-users"></i> Stakeholder Management</div>
+                            <div class="skill-item"><i class="fas fa-road"></i> Product Roadmapping</div>
+                            <div class="skill-item"><i class="fas fa-file-alt"></i> Requirements Gathering</div>
+                            <div class="skill-item"><i class="fas fa-rocket"></i> Go-to-Market Strategy</div>
+                            <div class="skill-item"><i class="fas fa-people-arrows"></i> Cross-functional Collaboration</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://hashnode.com/@MichelleSpeaks" target="_blank"><i class="fas fa-blog"></i></a>
+                <a href="https://linkedin.com/in/michelle-amanze" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:michelleamanze@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>Built by Michelle Amanze</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

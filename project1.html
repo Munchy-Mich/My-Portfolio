@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Pivot Nigeria Websites Development</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: black;
+      background-color: #ececec;
+    }
+    
+    .container {
+      max-width: 95%;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* Header */
+    header {
+      background-color: black;
+      color: #ececec;
+      padding: 2rem 0;
+    }
+    
+    .header-content {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    
+    .logo {
+      color: white;
+      font-size: 1.5rem;
+      font-family: 'great vibes', cursive;
+      font-weight: bold;
+      white-space: nowrap;
+      letter-spacing: 2px;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      padding: 0;
+    }
+    
+    .title-section {
+      flex: 1;
+      display: inline-block;
+      text-align: center;
+    }
+    
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: #db0746;
+      justify-content: center;
+    }
+    
+    .subtitle {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+    
+    .overview {
+      font-size: 0.9rem;
+    }
+    
+    /* Main Content */
+    main {
+      padding: 3rem 0;
+    }
+    
+    section {
+      margin-bottom: 3rem;
+    }
+    
+    h2 {
+      color: #db0746;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #db0746;
+      padding-bottom: 0.5rem;
+    }
+    
+    h3 {
+      color: black;
+      font-size: 1.3rem;
+      margin: 2rem 0 1rem 0;
+    }
+    
+    h4 {
+      color: #db0746;
+      font-size: 1.1rem;
+      margin: 1.5rem 0 0.5rem 0;
+    }
+    
+    p {
+      margin-bottom: 1rem;
+    }
+    
+    ul {
+      margin: 1rem 0;
+      padding-left: 2rem;
+    }
+    
+    li {
+      margin-bottom: 0.5rem;
+    }
+    
+    .quote {
+      background-color: #db0746;
+      color: #ececec;
+      padding: 1rem;
+      margin: 1rem 0;
+      font-style: italic;
+    }
+    
+    .highlight {
+      background-color: black;
+      color: #ececec;
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+    
+    .metrics {
+      background-color: black;
+      color: #ececec;
+      padding: 1.5rem;
+      margin: 1rem 0;
+    }
+    
+    .metrics strong {
+      color: #db0746;
+      font-size: 1.2rem;
+    }
+
+    a {
+      color: white;
+      transition: color 0.3s;
+    }
+
+    a:hover {
+      color: #db0746;
+    }
+    
+    /* Image placeholders */
+    .image-placeholder {
+      width: 50%;
+      height: auto;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ececec;
+      font-size: 1.2rem;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+    
+    .image-placeholder img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      /* margin: 0 auto; */
+
+    }
+
+    .image-caption {
+      font-style: italic;
+      color: #db0746;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      background-color: #ececec;
+    }
+    
+    th {
+      background-color: #db0746;
+      color: #ececec;
+      padding: 1rem;
+      text-align: left;
+    }
+    
+    td {
+      padding: 1rem;
+      border-bottom: 1px solid black;
+    }
+    
+    /* Footer */
+    footer {
+      background-color: black;
+      color: #ececec;
+      text-align: center;
+      padding: 2rem 0;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 15px;
+      }
+      
+      .header-content {
+        gap: 1rem;
+      }
+
+      .logo {
+        font-size: 1.3rem;
+        top: 0;
+        left: 0;
+      }
+      
+      h1 {
+        font-size: 1.5rem;
+      }
+      
+      .subtitle {
+        font-size: 0.9rem;
+      }
+      
+      .overview {
+        font-size: 0.8rem;
+      }
+      
+      h2 {
+        font-size: 1.5rem;
+      }
+      
+      h3 {
+        font-size: 1.2rem;
+      }
+      
+      .image-placeholder {
+        width: 80%;
+        height: 250px;
+        font-size: 1rem;
+        padding: 0.8rem;
+      }
+
+      .image-placeholder img {
+        height: 250px;
+      }
+      
+      table {
+        font-size: 0.9rem;
+      }
+      
+      th, td {
+        padding: 0.5rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 10px;
+      }
+      
+      .header-content {
+        gap: 0.5rem;
+      }
+      
+      .logo {
+        font-size: 1rem;
+        top: 0;
+        left: 0;
+        letter-spacing: 1px;
+      }
+      
+      h1 {
+        font-size: 1.3rem;
+      }
+      
+      .subtitle {
+        font-size: 0.8rem;
+      }
+      
+      .overview {
+        font-size: 0.7rem;
+      }
+      
+      h2 {
+        font-size: 1.3rem;
+      }
+      
+      h3 {
+        font-size: 1.1rem;
+      }
+      
+      .image-placeholder {
+        width: 90%;
+        padding: 0.5rem;
+        height: 200px;
+        font-size: 0.9rem;
+      }
+
+      .image-placeholder img {
+        height: 200px;
+      }
+      
+      table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">Michelle Amanze</div>
+        <div class="title-section">
+          <h1>The Pivot Nigeria Websites Development</h1>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+        <p class="subtitle">Led development of two responsive landing pages for civic-inspired movement</p>
+          <div class="overview">
+            <strong>Role:</strong> Product Manager <br><strong>Duration:</strong> 1 week (6 days) <br><strong>Team Size:</strong> 15 members
+          </div>
+      
+      <section>
+        <h2>Project Overview</h2>
+        <p>Led the development of two responsive landing pages for The Pivot Nigeria, a civic-inspired movement focused on African transformation. The project involved creating the main organizational website and a dedicated website for their flagship MSME digital transformation program.</p>
+        
+        <div class="metrics">
+          <p><strong>Timeline:</strong> Delivered on schedule</p>
+          <p><strong>Quality:</strong> Zero post-launch critical bugs</p>
+          <p><strong>Scope:</strong> 100% of requirements met</p>
+          <p><strong>Target:</strong> 3,000 MSMEs for The Pivot Challenge program</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Problem Statement</h2>
+        <p>The Pivot Nigeria needed a digital presence to support their mission of nurturing changemakers across Africa. They required:</p>
+        
+        <ul>
+          <li>A main website to showcase their movement and initiatives</li>
+          <li>A dedicated platform for The Pivot Challenge program targeting 3,000 MSMEs</li>
+          <li>Mobile-optimized, conversion-focused landing pages</li>
+          <li>Integration capabilities for forms, newsletters, and social media</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Team Structure</h2>
+        <p>Cross-functional team composition:</p>
+        
+        <div class="highlight">
+          <ul>
+            <li>Product Designers (4)</li>
+            <li>Frontend Developers (3)</li>
+            <li>Backend Developers (4)</li>
+            <li>Quality Assurance Analyst (1)</li>
+            <li>Data Analyst (1)</li>
+            <li>Digital Marketer (1)</li>
+            <li>Stakeholder: The Pivot Organisation leadership team</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Project Scope</h2>
+        
+        <h3>Primary Deliverables</h3>
+        
+        <h4>Main Website (thepivot.ng)</h4>
+        <ul>
+          <li>Homepage with hero messaging and navigation</li>
+          <li>About section with team profiles and mission</li>
+          <li>Initiatives showcase (Conference & Challenge)</li>
+          <li>Impact metrics and testimonials</li>
+          <li>Community engagement features</li>
+        </ul>
+        
+        <h4>Challenge Website (challenge.thepivot.ng)</h4>
+        <ul>
+          <li>Program overview and application flow</li>
+          <li>2025 edition details and registration</li>
+          <li>2024 recap and success stories</li>
+          <li>Partner and mentor onboarding</li>
+          <li>Media gallery and testimonials</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Process and Methodology</h2>
+        
+        <h3>Discovery and Planning (Day 1)</h3>
+        <ul>
+          <li>Conducted stakeholder interviews to understand requirements</li>
+          <li>Analyzed provided content briefs and brand guidelines</li>
+          <li>Created user personas for different audience segments</li>
+          <li>Defined technical requirements and integration needs</li>
+        </ul>
+        
+        <h3>Design and Development (Days 2-6)</h3>
+        <ul>
+          <li>Challenge Website: Completed in 3 days</li>
+          <li>Main Website: Completed in 3 days</li>
+          <li>Implemented responsive design across all devices</li>
+          <li>Integrated contact forms and newsletter signup</li>
+          <li>Set up content management system for easy updates</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Key Features Delivered</h2>
+        
+        <h3>User Experience Features</h3>
+        <ul>
+          <li>Mobile-first responsive design</li>
+          <li>Intuitive navigation with dropdown menus</li>
+          <li>Quick access links for key actions</li>
+          <li>Social media integration across platforms</li>
+          <li>Newsletter subscription functionality</li>
+        </ul>
+        
+        <h3>Technical Features</h3>
+        <ul>
+          <li>Form integrations (Contact, Application, Partnership, Volunteer, Mentorship)</li>
+          <li>Media gallery with photo and video support</li>
+          <li>Backend content management system</li>
+          <li>SEO optimization and meta tags</li>
+          <li>Cross-browser compatibility testing</li>
+        </ul>
+        
+        <div class="image-placeholder">
+          <img src="pivot.png">
+        </div>
+        <p class="image-caption">The Pivot Nigeria main website homepage design</p>
+        
+        <div class="image-placeholder">
+          <img src="Project 1/Pivot2.png">
+        </div>
+        <p class="image-caption">The Pivot Challenge program website interface</p>
+      </section>
+
+      <section>
+        <h2>Challenges and Solutions</h2>
+        
+        <h4>Challenge 1: Tight Timeline</h4>
+        <p><strong>Solution:</strong> Prioritized Challenge website development first as it had immediate application deadlines, followed by main website completion.</p>
+        
+        <h4>Challenge 2: Multiple Stakeholder Requirements</h4>
+        <p><strong>Solution:</strong> Established clear communication protocols and daily check-ins to ensure alignment across all parties.</p>
+        
+        <h4>Challenge 3: Content Integration</h4>
+        <p><strong>Solution:</strong> Developed flexible content templates that allowed for easy updates without developer intervention.</p>
+      </section>
+
+      <section>
+        <h2>Results and Impact</h2>
+        
+        <h3>Delivery Metrics</h3>
+        <div class="metrics">
+          <p><strong>Timeline:</strong> Delivered on schedule</p>
+          <p><strong>Quality:</strong> Zero post-launch critical bugs</p>
+          <p><strong>Scope:</strong> 100% of requirements met</p>
+          <p><strong>Team Satisfaction:</strong> All stakeholders approved deliverables</p>
+        </div>
+        
+        <h3>Key Outcomes</h3>
+        <ul>
+          <li>Successfully launched both websites before deadline</li>
+          <li>Enabled online application process for 3,000 MSME target</li>
+          <li>Established digital foundation for community building</li>
+          <li>Created scalable platform for future program iterations</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Lessons Learned</h2>
+        
+        <ul>
+          <li><strong>Stakeholder Alignment:</strong> Regular communication prevented scope creep and ensured clear expectations</li>
+          <li><strong>Agile Delivery:</strong> Breaking project into phases allowed for faster iteration and feedback</li>
+          <li><strong>Cross-functional Collaboration:</strong> Daily standups kept all team members aligned on progress</li>
+          <li><strong>User-Centric Design:</strong> Focus on mobile optimization was crucial for target audience accessibility</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Project Status</h2>
+        
+        <div class="highlight">
+          <p><strong>Status:</strong> Successfully delivered and launched</p>
+          <p><strong>Client Feedback:</strong> Exceeded expectations with timely delivery and comprehensive feature set</p>
+          <p><strong>View Live:</strong> 
+            <a href="https://thepivot.netlify.app/" target="_blank">Challenge Website</a> | 
+            <a href="https://thepivotsite.netlify.app/" target="_blank">Main Website</a>
+          </p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Michelle Amanze</p>
+    </div>
+  </footer>
+</body>
+</html>

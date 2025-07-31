@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlatShare: Affordable Shared Housing Platform</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: black;
+      background-color: #ececec;
+    }
+    
+    .container {
+      max-width: 95%;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* Header */
+    header {
+      background-color: black;
+      color: #ececec;
+      padding: 2rem 0;
+    }
+    
+    .header-content {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    
+    .logo {
+      color: white;
+      font-size: 1.5rem;
+      font-family: 'great vibes', cursive;
+      font-weight: bold;
+      white-space: nowrap;
+      letter-spacing: 2px;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      padding: 0;
+    }
+    
+    .title-section {
+      flex: 1;
+      display: inline-block;
+      text-align: center;
+    }
+    
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: #db0746;
+      justify-content: center;
+    }
+    
+    .subtitle {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+    
+    .overview {
+      font-size: 0.9rem;
+    }
+    
+    /* Main Content */
+    main {
+      padding: 3rem 0;
+    }
+    
+    section {
+      margin-bottom: 3rem;
+    }
+    
+    h2 {
+      color: #db0746;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #db0746;
+      padding-bottom: 0.5rem;
+    }
+    
+    h3 {
+      color: black;
+      font-size: 1.3rem;
+      margin: 2rem 0 1rem 0;
+    }
+    
+    h4 {
+      color: #db0746;
+      font-size: 1.1rem;
+      margin: 1.5rem 0 0.5rem 0;
+    }
+    
+    p {
+      margin-bottom: 1rem;
+    }
+    
+    ul {
+      margin: 1rem 0;
+      padding-left: 2rem;
+    }
+    
+    li {
+      margin-bottom: 0.5rem;
+    }
+    
+    .quote {
+      background-color: #db0746;
+      color: #ececec;
+      padding: 1rem;
+      margin: 1rem 0;
+      font-style: italic;
+    }
+    
+    .highlight {
+      background-color: black;
+      color: #ececec;
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+    
+    .metrics {
+      background-color: black;
+      color: #ececec;
+      padding: 1.5rem;
+      margin: 1rem 0;
+    }
+    
+    .metrics strong {
+      color: #db0746;
+      font-size: 1.2rem;
+    }
+
+    .attachment {
+      font-style: italic;
+      margin: 1rem 0;
+    }
+
+    .attachment a {
+        color: #db0746;
+    }
+
+    a {
+      color: #db0746;
+      transition: color 0.3s;
+    }
+
+    a:hover {
+      color: #ececec;
+    }
+    
+    /* Image placeholders */
+    .image-placeholder img {
+      width: 500px;
+      height: 300px;
+      object-fit: contain;
+      display: block;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      padding: 0.5rem;
+    }
+    
+    .image-caption {
+      font-style: italic;
+      color: #db0746;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      background-color: #ececec;
+    }
+    
+    th {
+      background-color: #db0746;
+      color: #ececec;
+      padding: 1rem;
+      text-align: left;
+    }
+    
+    td {
+      padding: 1rem;
+      border-bottom: 1px solid black;
+    }
+    
+    /* Footer */
+    footer {
+      background-color: black;
+      color: #ececec;
+      text-align: center;
+      padding: 2rem 0;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 15px;
+      }
+      
+      .header-content {
+        gap: 1rem;
+      }
+
+      .logo {
+        font-size: 1.3rem;
+        top: 0;
+        left: 0;
+      }
+      
+      h1 {
+        font-size: 1.5rem;
+      }
+      
+      .subtitle {
+        font-size: 0.9rem;
+      }
+      
+      .overview {
+        font-size: 0.8rem;
+      }
+      
+      h2 {
+        font-size: 1.5rem;
+      }
+      
+      h3 {
+        font-size: 1.2rem;
+      }
+
+      .image-placeholder img {
+        width: 90%;
+        height: auto;
+      }
+      
+      table {
+        font-size: 0.9rem;
+      }
+      
+      th, td {
+        padding: 0.5rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 10px;
+      }
+      
+      .header-content {
+        gap: 0.5rem;
+      }
+      
+      .logo {
+        font-size: 1rem;
+        top: 0;
+        left: 0;
+        letter-spacing: 1px;
+      }
+      
+      h1 {
+        font-size: 1.3rem;
+      }
+      
+      .subtitle {
+        font-size: 0.8rem;
+      }
+      
+      .overview {
+        font-size: 0.7rem;
+      }
+      
+      h2 {
+        font-size: 1.3rem;
+      }
+      
+      h3 {
+        font-size: 1.1rem;
+      }
+
+      .image-placeholder img {
+        width: 100%;
+        height: auto;
+        padding: 0.3rem;
+      }
+      
+      table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">Michelle Amanze</div>
+        <div class="title-section">
+          <h1>FlatShare: Affordable Shared Housing Platform</h1>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+        <p class="subtitle">Connecting Young Professionals with Affordable Shared Housing in Abuja</p>
+          <div class="overview">
+            <strong>Role:</strong> Product Manager/Owner <br><strong>Team:</strong> Individual project <br><strong>Focus:</strong> Digital marketplace for shared accommodations
+          </div>
+      
+      <section>
+        <h2>Project Overview</h2>
+        <p>FlatShare is a digital marketplace platform designed to connect property owners with young professionals seeking affordable shared accommodations in Abuja, Nigeria. As a solo product management project, I developed this initiative from conception through MVP planning, addressing a critical housing accessibility gap in Nigeria's capital city.</p>
+        
+        <div class="metrics">
+          <p><strong>Target Market:</strong> Young professionals earning ₦150,000-₦350,000 monthly</p>
+          <p><strong>Projected Impact:</strong> 40% cost reduction compared to traditional rentals</p>
+          <p><strong>Timeline:</strong> Beta testing September 2025, Launch October 2025</p>
+          <p><strong>Investment Target:</strong> ₦75 million Series A funding</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Problem Identification & Definition</h2>
+        
+        <h3>The Challenge</h3>
+        <p>Young professionals in Abuja face a severe housing crisis where average rental costs consume 60-70% of their monthly income. This forces them to choose between unaffordable formal housing options and unsafe informal arrangements, with minimal digital solutions available to bridge this gap.</p>
+        
+        <h4>Key Problem Indicators:</h4>
+        <ul>
+          <li>Housing supply meets less than 20% of market demand</li>
+          <li>Traditional rental agencies charge 10% of annual rent in fees</li>
+          <li>Limited digital platforms for verified shared accommodations</li>
+        </ul>
+
+        <div class="attachment"><i>Problem Definition & Solution Mapping Document:</i> <a href="https://docs.google.com/document/d/1312cHTwGGKhmIOy9EyalRlnGOe1qvoyLWDNhdWYNtPM/edit?usp=sharing" target="_blank">Problem Definition and Solution Mapping</a></div>
+      </section>
+
+      <section>
+        <h2>Research & Discovery</h2>
+        
+        <h3>Research Methodology</h3>
+        <p>I conducted comprehensive market research to validate the problem space and identify user needs:</p>
+        
+        <div class="highlight">
+          <ul>
+            <li>47 structured interviews with young professionals in Abuja</li>
+            <li>1,200+ rental listing analysis across existing platforms</li>
+            <li>35 property owner surveys on rental preferences</li>
+            <li>Competitive landscape mapping of Nigerian housing solutions</li>
+          </ul>
+        </div>
+
+        <h3>Key Research Findings</h3>
+        <ul>
+          <li><strong>78%</strong> of young professionals spend over 50% of income on housing</li>
+          <li><strong>92%</strong> would consider shared accommodations if properly vetted</li>
+          <li>Property owners could increase yields by <strong>35-40%</strong> through room sharing</li>
+          <li>Existing platforms lack robust verification and matching capabilities</li>
+        </ul>
+
+        <div class="attachment"><i>User Research Document:</i> <a href="https://docs.google.com/document/d/1_VOLTtwRneG3oR1ekhSCPj_Yow_SUhRh1tVvXNVpYpE/edit?usp=sharing" target="_blank">User Research Document</a></div>
+        <div class="attachment"><i>Market Analysis Report:</i> <a href="https://docs.google.com/document/d/1vrzLzydpFm129oNjobcdOXukwXYs5PmZRmbU6ihd1rA/edit?usp=sharing" target="_blank">Market Analysis</a></div>
+      </section>
+
+      <section>
+        <h2>Product Strategy & Requirements</h2>
+        
+        <h3>Target Users</h3>
+        <div class="quote">
+          <p><strong>Primary Segment:</strong> Young professionals (25-35 years) earning ₦150,000-₦350,000 monthly</p>
+          <p><strong>Secondary Segment:</strong> Property owners seeking reliable tenants for shared arrangements</p>
+        </div>
+
+        <h3>Product Vision</h3>
+        <p>Create Nigeria's first end-to-end digital platform for verified shared accommodations, featuring AI-driven matching, integrated payments, and community building.</p>
+
+        <h3>Core Features (MVP)</h3>
+        <ul>
+          <li>AI-driven matching algorithm based on lifestyle and budget preferences</li>
+          <li>Verified property listings with standardized information</li>
+          <li>In-app messaging with translation support</li>
+        </ul>
+
+        <div class="attachment"><i>Product Requirements Document (PRD):</i> <a href="https://docs.google.com/document/d/1yF9CZxquyvahaVdXum0NcxZKlqKGM02ZM6FylasvHz4/edit?usp=sharing" target="_blank">Product Requirements Document (PRD)</a></div>
+      </section>
+
+      <section>
+        <h2>Development Planning & Strategy</h2>
+        
+        <h3>Technical Architecture</h3>
+        <p>I designed a scalable microservices architecture using AI for cross-platform functionality, AWS infrastructure, and verification for enhanced security.</p>
+
+        <h3>Project Management Approach</h3>
+        <p>I implemented a structured approach using agile methodology principles:</p>
+        <ul>
+          <li>Created product development roadmap with timeline estimates</li>
+          <li>Developed feature backlog with prioritized epics and user stories</li>
+        </ul>
+
+        <div class="image-placeholder">
+          <img src="Project 2/1.png">
+        </div>
+        <p class="image-caption">Sprint breakdown</p>
+
+        <div class="attachment"><i>Communication Strategy:</i> <a href="https://docs.google.com/document/d/10Ycp8gygLuOgaTN_Vet5042Ki0ycQOOfhb8jklAlhrs/edit?usp=sharing" target="_blank">Communication Handbook</a></div>
+      </section>
+
+      <section>
+        <h2>Go-to-Market Strategy</h2>
+        
+        <h3>Launch Strategy</h3>
+        <p>I developed a comprehensive market entry approach:</p>
+        
+        <ul>
+          <li><strong>Pre-launch:</strong> 200 pre-vetted listings in key Abuja neighborhoods</li>
+          <li><strong>Partnerships:</strong> Outreach to 5 major employers in Abuja's business district</li>
+          <li><strong>Marketing:</strong> Targeted social media campaigns and university engagement events</li>
+          <li><strong>Timeline:</strong> Beta testing (September 2025), Official launch (October 2025)</li>
+        </ul>
+
+        <h3>Success Metrics</h3>
+        <div class="metrics">
+          <p><strong>User Growth Rate:</strong> 30% month-over-month target</p>
+          <p><strong>Successful Matches:</strong> 2,000 in first year target</p>
+          <p><strong>Cost Reduction:</strong> 40% compared to traditional rentals</p>
+          <p><strong>User Satisfaction:</strong> 85%+ positive ratings target</p>
+        </div>
+
+        <div class="attachment"><i>Rollout Plan:</i> <a href="https://docs.google.com/document/d/14a9inj1iXYpVqj-rFYegEkKa0jMnP6dyfDR6mEjyg9g/edit?usp=sharing" target="_blank">Rollout Plan</a></div>
+      </section>
+
+      <section>
+        <h2>Prototype Development & Validation</h2>
+        
+        <h3>Prototype Testing Results</h3>
+        <p>I developed and tested an interactive prototype with potential users:</p>
+        
+        <h4>Quantitative Results:</h4>
+        <ul>
+          <li><strong>87%</strong> rated concept as "very appealing" or "appealing"</li>
+          <li><strong>73%</strong> indicated immediate usage intent upon launch</li>
+          <li><strong>82%</strong> task completion rate in usability testing</li>
+        </ul>
+
+        <h4>Qualitative Feedback:</h4>
+        <p>User testimonials validated core value proposition with specific impact on housing cost reduction and property owner income increase.</p>
+
+        <div class="attachment"><i>Interactive Prototype:</i> <a href="https://www.figma.com/proto/iZv0c6H4rX6f8E4kUzcO2B/Flatshare?node-id=1-2&p=f&t=6OdNKLMy3T5rcUdH-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2" target="_blank">FlatShare PROTOTYPE</a></div>
+      </section>
+
+      <section>
+        <h2>Post-Launch Analysis Framework</h2>
+        
+        <h3>Performance Analysis Strategy</h3>
+        <p>I developed a comprehensive framework for measuring product success:</p>
+        
+        <h4>Analysis Components:</h4>
+        <div class="highlight">
+          <ul>
+            <li>Feature adoption rate tracking methodology</li>
+            <li>User engagement pattern analysis framework</li>
+            <li>Conversion funnel optimization approach</li>
+            <li>Customer satisfaction monitoring system</li>
+          </ul>
+        </div>
+
+        <h3>Continuous Improvement Process</h3>
+        <ul>
+          <li>Monthly performance review cycles</li>
+          <li>Quarterly user feedback integration sessions</li>
+          <li>Bi-annual market expansion assessment</li>
+        </ul>
+
+        <div class="attachment"><i>Post-Launch Analysis:</i> <a href="https://docs.google.com/document/d/1pjW8IBkAhKi-AA94FcIFPlz6VNTusy0Sj8Ug5ROhutc/edit?usp=sharing" target="_blank">Post-Launch Analysis</a></div>
+        <div class="attachment"><i>Feature Improvement RFC:</i> <a href="https://docs.google.com/document/d/1DHnLfGngyrlwAG3vqA0E9uWFxvIJMR9gaWeKz45eoQQ/edit?usp=sharing" target="_blank">RFC Document</a></div>
+      </section>
+
+      <section>
+        <h2>Business Impact & Future Opportunities</h2>
+        
+        <h3>Projected Impact</h3>
+        <div class="metrics">
+          <p><strong>Break-even:</strong> Month eight post-launch</p>
+          <p><strong>Investment Readiness:</strong> ₦75 million Series A target</p>
+          <p><strong>Market Expansion:</strong> Lagos and Port Harcourt roadmap</p>
+          <p><strong>Integration Opportunities:</strong> Financial services providers</p>
+        </div>
+
+        <h3>Key Learnings</h3>
+        <p>Through my research and prototype testing, I discovered:</p>
+        <ul>
+          <li>Community-focused approach shows strong user resonance</li>
+          <li>Property owners willing to offer reduced rates for verified tenants</li>
+          <li>Neighborhood safety data serves as significant competitive differentiator</li>
+          <li>Cultural education required for shared living acceptance in Nigerian market</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Conclusion</h2>
+        
+        <p>As a solo product management project, FlatShare demonstrates my ability to identify market opportunities, conduct comprehensive user research, and develop scalable product solutions. The project addresses fundamental market inefficiencies in housing access through innovative digital solutions while building a viable business model for expansion across urban Nigeria.</p>
+
+        <h3>Key Achievements</h3>
+        <div class="highlight">
+          <ul>
+            <li>Comprehensive market research with 82+ user touchpoints</li>
+            <li>End-to-end product strategy from problem identification to launch planning</li>
+            <li>Validated product-market fit through prototype testing</li>
+            <li>Strategic business model with clear path to profitability</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Project Status</h2>
+        
+        <div class="highlight">
+          <p><strong>Status:</strong> MVP development ready, seeking development partners</p>
+          <p><strong>Next Steps:</strong> Technical team assembly and beta launch preparation</p>
+          <p><strong>Contact:</strong> Available for detailed project discussion and documentation access</p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Michelle Amanze</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facebook Feed Toggle Feature Development</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: black;
+      background-color: #ececec;
+    }
+    
+    .container {
+      max-width: 95%;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* Header */
+    header {
+      background-color: black;
+      color: #ececec;
+      padding: 2rem 0;
+    }
+    
+    .header-content {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    
+    .logo {
+      color: white;
+      font-size: 1.5rem;
+      font-family: 'great vibes', cursive;
+      font-weight: bold;
+      white-space: nowrap;
+      letter-spacing: 2px;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      padding: 0;
+    }
+    
+    .title-section {
+      flex: 1;
+      display: inline-block;
+      text-align: center;
+    }
+    
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: #db0746;
+      justify-content: center;
+    }
+    
+    .subtitle {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+    
+    .overview {
+      font-size: 0.9rem;
+    }
+    
+    /* Main Content */
+    main {
+      padding: 3rem 0;
+    }
+    
+    section {
+      margin-bottom: 3rem;
+    }
+    
+    h2 {
+      color: #db0746;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #db0746;
+      padding-bottom: 0.5rem;
+    }
+    
+    h3 {
+      color: black;
+      font-size: 1.3rem;
+      margin: 2rem 0 1rem 0;
+    }
+    
+    h4 {
+      color: #db0746;
+      font-size: 1.1rem;
+      margin: 1.5rem 0 0.5rem 0;
+    }
+    
+    p {
+      margin-bottom: 1rem;
+    }
+    
+    ul {
+      margin: 1rem 0;
+      padding-left: 2rem;
+    }
+    
+    li {
+      margin-bottom: 0.5rem;
+    }
+    
+    .quote {
+      background-color: #db0746;
+      color: #ececec;
+      padding: 1rem;
+      margin: 1rem 0;
+      font-style: italic;
+    }
+    
+    .highlight {
+      background-color: black;
+      color: #ececec;
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+    
+    .metrics {
+      background-color: black;
+      color: #ececec;
+      padding: 1.5rem;
+      margin: 1rem 0;
+    }
+    
+    .metrics strong {
+      color: #db0746;
+      font-size: 1.2rem;
+    }
+
+    a {
+      color: #db0746;
+      transition: color 0.3s;
+    }
+
+    a:hover {
+      color: #ececec;
+    }
+    
+    /* Image placeholders */
+    /* .image-placeholder {
+      width: 90%;
+      height: 200px;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ececec;
+      font-size: 0.9rem;
+      margin: 0 auto;
+      padding: 0.5rem;
+      border: 2px solid #db0746;
+    } */
+
+    .image-placeholder img {
+      width: 500px;
+      height: 300px;
+      object-fit: contain;
+      display: block;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      padding: 0.5rem;
+    }
+    
+    .image-caption {
+      font-style: italic;
+      color: #db0746;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      background-color: #ececec;
+    }
+    
+    th {
+      background-color: #db0746;
+      color: #ececec;
+      padding: 1rem;
+      text-align: left;
+    }
+    
+    td {
+      padding: 1rem;
+      border-bottom: 1px solid black;
+    }
+    
+    /* Footer */
+    footer {
+      background-color: black;
+      color: #ececec;
+      text-align: center;
+      padding: 2rem 0;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 15px;
+      }
+      
+      .header-content {
+        gap: 1rem;
+      }
+
+      .logo {
+        font-size: 1.3rem;
+        top: 0;
+        left: 0;
+      }
+      
+      h1 {
+        font-size: 1.5rem;
+      }
+      
+      .subtitle {
+        font-size: 0.9rem;
+      }
+      
+      .overview {
+        font-size: 0.8rem;
+      }
+      
+      h2 {
+        font-size: 1.5rem;
+      }
+      
+      h3 {
+        font-size: 1.2rem;
+      }
+      
+      /* .image-placeholder {
+        width: 80%;
+        height: 250px;
+        font-size: 1rem;
+        padding: 0.8rem;
+      } */
+
+      .image-placeholder img {
+        width: 90%;
+        height: auto;
+      }
+      
+      table {
+        font-size: 0.9rem;
+      }
+      
+      th, td {
+        padding: 0.5rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 10px;
+      }
+      
+      .header-content {
+        gap: 0.5rem;
+      }
+      
+      .logo {
+        font-size: 1rem;
+        top: 0;
+        left: 0;
+        letter-spacing: 1px;
+      }
+      
+      h1 {
+        font-size: 1.3rem;
+      }
+      
+      .subtitle {
+        font-size: 0.8rem;
+      }
+      
+      .overview {
+        font-size: 0.7rem;
+      }
+      
+      h2 {
+        font-size: 1.3rem;
+      }
+      
+      h3 {
+        font-size: 1.1rem;
+      }
+      
+      /* .image-placeholder {
+        width: 90%;
+        padding: 0.5rem;
+        height: 200px;
+        font-size: 0.9rem;
+      } */
+
+      .image-placeholder img {
+        width: 100%;
+        height: auto;
+        padding: 0.3rem;
+      }
+      
+      table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">Michelle Amanze</div>
+        <div class="title-section">
+          <h1>Facebook Feed Toggle Feature Development</h1>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+        <p class="subtitle">Addressing Newsfeed Clutter Through User-Centered Design</p>
+          <div class="overview">
+            <strong>Role:</strong> Product Manager & Design Sprint Lead <br><strong>Duration:</strong> January 2025 - March 2025 <br><strong>Team Size:</strong> 5 members
+          </div>
+      
+      <section>
+        <h2>Project Overview</h2>
+        <p>Led the development of a Facebook Feed Toggle feature to address significant user friction with algorithmic content curation. Through comprehensive design evaluation and user research, developed a solution enabling users to switch between algorithm-curated and chronological feeds, addressing newsfeed clutter for 3+ billion Facebook users.</p>
+        
+        <div class="metrics">
+          <p><strong>User Adoption:</strong> 47% within 30 days</p>
+          <p><strong>Session Duration:</strong> 18% increase</p>
+          <p><strong>Content Engagement:</strong> Improved across both feed types</p>
+          <p><strong>Problem Space:</strong> Social media platform navigation and content control</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Problem Statement</h2>
+        <p>Facebook's 3+ billion users faced significant friction with algorithmic content curation, leading to decreased user satisfaction and reduced control over their social media experience. Through comprehensive design evaluation, we identified newsfeed clutter as the primary pain point affecting user engagement across different activity segments.</p>
+        
+        <h4>Key Pain Points Discovered:</h4>
+        <ul>
+          <li>Users lacked control over content visibility algorithms</li>
+          <li>Interface clutter reduced content discoverability</li>
+          <li>Inconsistent user experience between high and low-activity users</li>
+          <li>Limited transparency in content curation logic</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Research & Discovery</h2>
+        
+        <h3>Initial Design Evaluation</h3>
+        <p>Conducted comprehensive UX audit across four critical dimensions:</p>
+        
+        <div class="highlight">
+          <ul>
+            <li>User-Centered Design principles</li>
+            <li>Visual design hierarchy and consistency</li>
+            <li>Interaction design patterns</li>
+            <li>Accessibility and inclusivity standards</li>
+          </ul>
+        </div>
+
+        <h3>Primary Research Insights</h3>
+        <ul>
+          <li><strong>User Control Gap:</strong> 73% of users wanted more feed customization options</li>
+          <li><strong>Algorithmic Frustration:</strong> Users reported feeling disconnected from content they actually wanted to see</li>
+          <li><strong>Navigation Complexity:</strong> Overlapping features (Stories, Reels, Watch) created decision fatigue</li>
+        </ul>
+
+        <div class="attachment"><i>Design Evaluation Document:</i> <a href="https://docs.google.com/document/d/1A1n1Dn61vSqUUkqjT6mYNECMvbQR5cjyM9N8vwBQm9A/edit?usp=sharing" target="_blank">Facebook's Design Evaluation</a></div>
+      </section>
+
+      <section>
+        <h2>Solution Development</h2>
+        
+        <h3>Design Sprint Process</h3>
+        <p>Led a structured 5-day design sprint focusing on user empowerment through feed control mechanisms.</p>
+        
+        <h4>Sprint Structure:</h4>
+        <ul>
+          <li><strong>Day 1-2:</strong> Problem definition and solution ideation</li>
+          <li><strong>Day 3:</strong> Solution convergence and concept selection</li>
+          <li><strong>Day 4:</strong> Rapid prototyping of feed toggle feature</li>
+          <li><strong>Day 5:</strong> User testing and validation</li>
+        </ul>
+
+        <div class="image-placeholder">
+          <img src="Project 3/1.png">
+        </div>
+        <p class="image-caption">Design Sprint Journey Map - Figjam Board</p>
+
+        <h3>Core Feature: Feed Toggle System</h3>
+        <p>Developed a dual-feed approach allowing users to switch between:</p>
+        
+        <div class="quote">
+          <p><strong>"For You" Feed:</strong> Algorithm-curated content for discovery</p>
+          <p><strong>"Following" Feed:</strong> Chronological content from connections</p>
+        </div>
+
+        <h4>Feature Requirements:</h4>
+        <ul>
+          <li>One-tap toggle functionality</li>
+          <li>Clear visual indicators for active feed type</li>
+          <li>Seamless transition between feed modes</li>
+          <li>Persistent user preference memory</li>
+        </ul>
+
+        <div class="image-placeholder">
+          <img src="Project 3/2.png">
+        </div>
+        <p class="image-caption">Wireframe</p>
+        
+        <div class="image-placeholder">
+          <img src="Project 3/3.png">
+        </div>
+        <p class="image-caption">Mockup</p>
+      </section>
+
+      <section>
+        <h2>Implementation Strategy</h2>
+        
+        <h3>MVP Definition</h3>
+        <p>Prioritized core toggle functionality with minimal UI changes to reduce development complexity and user adaptation friction.</p>
+        
+        <h4>Success Metrics:</h4>
+        <ul>
+          <li>Toggle adoption rate</li>
+          <li>Session duration improvement</li>
+          <li>User satisfaction scores</li>
+          <li>Content engagement rates per feed type</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Results & Performance Analysis</h2>
+        
+        <h3>Overall Results</h3>
+        <div class="metrics">
+          <p><strong>Feature Adoption:</strong> 47% of users within 30 days</p>
+          <p><strong>Session Duration:</strong> 18% average increase</p>
+          <p><strong>Content Engagement:</strong> Improved across both feed types</p>
+          <p><strong>User Satisfaction:</strong> Positive feedback on increased control</p>
+        </div>
+
+        <div class="attachment"><i>Performance Analysis:</i> <a href="https://docs.google.com/spreadsheets/d/1d9LpSLSGBXgiqTdw55Z6OlYRyErvnK-F/edit?usp=sharing&ouid=109825202811418554548&rtpof=true&sd=true" target="_blank">Facebook's Feed Toggle Feature Analysis</a></div>
+        
+        <h3>Critical Discovery: Usage Disparity</h3>
+        <p>Data revealed significant performance gaps between user segments:</p>
+        
+        <table>
+          <thead>
+            <tr>
+              <th>User Segment</th>
+              <th>Toggle Usage/Session</th>
+              <th>Following Feed Preference</th>
+              <th>Engagement Increase</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>High-Activity Users</td>
+              <td>5.3-5.8 times</td>
+              <td>57.7-65.2%</td>
+              <td>24.8-33.6%</td>
+            </tr>
+            <tr>
+              <td>Low-Activity Users</td>
+              <td>1.4-2.5 times</td>
+              <td>32.8-40.6%</td>
+              <td>9.5-17.9%</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="attachment"><i>Feature Performance Analysis Document:</i> <a href="https://docs.google.com/document/d/1RCTKsIepv7I0KLBzWlkfyiOgty17Qkf-uTtuP0wXY6M/edit?usp=sharing" target="_blank">Facebook's Feed Toggle Performance Analysis</a></div>
+      </section>
+
+      <section>
+        <h2>Problem Iteration: Addressing Usage Disparity</h2>
+        
+        <h3>Secondary Problem Definition</h3>
+        <p>Identified that the toggle feature created unequal value distribution, potentially alienating low-activity users and creating engagement inequality.</p>
+        
+        <h3>Follow-Up Design Sprint</h3>
+        <p>Initiated second design sprint to address discovered usage disparity:</p>
+        
+        <h4>Focus Areas:</h4>
+        <ul>
+          <li>Simplified onboarding for casual users</li>
+          <li>Enhanced "Following" feed relevance</li>
+          <li>Improved feature discoverability</li>
+          <li>Accessibility improvements for varying user technical comfort levels</li>
+        </ul>
+        
+        <div class="image-placeholder">
+          <img src="Project 3/4.png">
+        </div>
+        <p class="image-caption">Redesign Sprint Journey Map - Figjam Board</p>
+      </section>
+
+      <section>
+        <h2>Proposed Solutions & Redesign Strategy</h2>
+        
+        <h3>Inclusive Interface Design</h3>
+        <ul>
+          <li>Simplified toggle mechanism with clear affordances</li>
+          <li>Progressive disclosure of advanced features</li>
+          <li>Context-aware help system</li>
+        </ul>
+        
+        <h3>Personalized Feed Optimization</h3>
+        <ul>
+          <li>Content relevance algorithms tailored to user activity patterns</li>
+          <li>Smart defaults based on usage history</li>
+          <li>Enhanced content quality filters for Following feed</li>
+        </ul>
+        
+        <h3>User Education & Onboarding</h3>
+        <ul>
+          <li>Feature value communication strategy</li>
+          <li>Progressive feature introduction</li>
+          <li>Usage pattern guidance</li>
+        </ul>
+
+        <div class="attachment"><i>Iteration Prototype:</i> <a href="https://www.figma.com/proto/kb5MYztoSaKH7PjCLqLQ8R/Upskill-Task-4?node-id=102-2&t=6UJsyVbjZJ2dLjB3-1" target="_blank">Facebook's Feed Toggle PROTOTYPE</a></div>
+      </section>
+
+      <section>
+        <h2>Key Learnings</h2>
+        
+        <h3>Product Management Insights</h3>
+        <ul>
+          <li><strong>Data-Driven Iteration:</strong> Post-launch analysis revealed hidden user segment disparities not apparent in initial testing</li>
+          <li><strong>Inclusive Design Impact:</strong> Features must deliver value across all user types to avoid creating platform inequality</li>
+          <li><strong>Metrics Beyond Averages:</strong> Segment-specific analysis prevented misleading success interpretation</li>
+        </ul>
+        
+        <h3>Process Learnings</h3>
+        <ul>
+          <li>Design sprints enabled rapid solution validation and iteration</li>
+          <li>Collaboration improved solution comprehensiveness</li>
+          <li>User-centered evaluation methodology identified root causes effectively</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Potential Impact & Future Roadmap</h2>
+        
+        <h3>Hypothetical Business Impact</h3>
+        <div class="highlight">
+          <ul>
+            <li>Improved user control and platform satisfaction</li>
+            <li>Enhanced content engagement across user segments</li>
+            <li>Foundation for future personalization features</li>
+            <li>Reduced user churn risk through increased control</li>
+          </ul>
+        </div>
+        
+        <h3>Suggested Future Roadmap</h3>
+        <ul>
+          <li>Implement proposed disparity solutions</li>
+          <li>Expand toggle functionality to additional content types</li>
+          <li>Develop advanced personalization algorithms</li>
+          <li>Create comprehensive user control center</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Project Status</h2>
+        
+        <div class="highlight">
+          <p><strong>Status:</strong> Feature launched and iterating based on usage data</p>
+          <p><strong>Key Achievement:</strong> Successfully identified and addressed user segment disparity through data-driven iteration</p>
+          <p><strong>Tools Used:</strong> Figma, FigJam, Excel, User Research Methods</p>
+          <p><strong>Skills Demonstrated:</strong> Design Sprint Facilitation, Data Analysis, User Research, Cross-Functional Leadership, Problem Iteration</p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Michelle Amanze</p>
+    </div>
+  </footer>
+</body>
+</html>

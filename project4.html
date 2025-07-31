@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShantyBay: Empowering Nigeria's Small Retailers</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: black;
+      background-color: #ececec;
+    }
+    
+    .container {
+      max-width: 95%;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* Header */
+    header {
+      background-color: black;
+      position: relative;
+      color: #ececec;
+      padding: 2rem 0;
+    }
+    
+    .header-content {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    
+    .logo {
+      color: white;
+      font-size: 1.5rem;
+      font-family: 'great vibes', cursive;
+      font-weight: bold;
+      white-space: nowrap;
+      letter-spacing: 2px;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      padding: 0;
+    }
+    
+    .title-section {
+      flex: 1;
+      display: inline-block;
+      text-align: center;
+    }
+    
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: #db0746;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+    
+    .subtitle {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      justify-content: center;
+    }
+    
+    .overview {
+      font-size: 0.9rem;
+    }
+    
+    /* Main Content */
+    main {
+      padding: 3rem 0;
+    }
+    
+    section {
+      margin-bottom: 3rem;
+    }
+    
+    h2 {
+      color: #db0746;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #db0746;
+      padding-bottom: 0.5rem;
+    }
+    
+    h3 {
+      color: black;
+      font-size: 1.3rem;
+      margin: 2rem 0 1rem 0;
+    }
+    
+    h4 {
+      color: #db0746;
+      font-size: 1.1rem;
+      margin: 1.5rem 0 0.5rem 0;
+    }
+    
+    p {
+      margin-bottom: 1rem;
+    }
+    
+    ul {
+      margin: 1rem 0;
+      padding-left: 2rem;
+    }
+    
+    li {
+      margin-bottom: 0.5rem;
+    }
+    
+    .quote {
+      background-color: #db0746;
+      color: #ececec;
+      padding: 1rem;
+      margin: 1rem 0;
+      font-style: italic;
+    }
+    
+    .highlight {
+      background-color: black;
+      color: #ececec;
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+    
+    .metrics {
+      background-color: black;
+      color: #ececec;
+      padding: 1.5rem;
+      margin: 1rem 0;
+    }
+    
+    .metrics strong {
+      color: #db0746;
+      font-size: 1.2rem;
+    }
+    
+    /* Image placeholders */
+    .image-holder {
+      background-color: #ececec;
+      display: flex;
+      gap: 0;
+      align-items: center;
+      justify-content: center;
+      color: #ececec;
+      font-size: 1.2rem;
+      margin: 1rem 0;
+    }
+
+    .image-holder img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      flex: 1;
+      gap: 0;
+    }
+
+    .image-placeholder {
+      background-color: #ececec;
+      display: flex;
+      gap: 0;
+      align-items: center;
+      justify-content: center;
+      color: #ececec;
+      font-size: 1.2rem;
+      margin: 1rem 0;
+    }
+
+    .image-placeholder img {
+      width: 75%;
+      height: 200px;
+      object-fit: contain;
+      flex: 1;
+      gap: 0;
+    }
+    
+    .image-caption {
+      font-style: italic;
+      color: #db0746;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      background-color: #ececec;
+    }
+    
+    th {
+      background-color: #db0746;
+      color: #ececec;
+      padding: 1rem;
+      text-align: left;
+    }
+    
+    td {
+      padding: 1rem;
+      border-bottom: 1px solid black;
+    }
+
+    .links {
+      background-color: black;
+      color: white;
+      padding: 2rem;
+      border-radius: 8px;
+      margin: 2rem 0;
+    }
+    
+    .links h3 {
+      color: #ececec;
+      margin-bottom: 1rem;
+    }
+    
+    .links a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      margin: 0.5rem 0;
+    }
+    
+    .links a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Footer */
+    footer {
+      background-color: black;
+      color: #ececec;
+      text-align: center;
+      padding: 2rem 0;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 15px;
+      }
+      
+      .header-content {
+        gap: 1rem;
+      }
+      
+      h1 {
+        font-size: 1.5rem;
+      }
+      
+      .subtitle {
+        font-size: 0.9rem;
+      }
+      
+      .overview {
+        font-size: 0.8rem;
+      }
+      
+      h2 {
+        font-size: 1.5rem;
+      }
+      
+      h3 {
+        font-size: 1.2rem;
+      }
+
+      .image-holder {
+         flex-wrap: wrap;
+         gap: 0.5rem;
+      }
+
+        .image-holder img {
+            flex: 1 1 calc(50% - 0.5rem);
+            height: auto; 
+        }
+
+        .image-placeholder {
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .image-placeholder img {
+            flex: 1 1 100%;
+            height: auto;
+        }
+      
+      table {
+        font-size: 0.9rem;
+      }
+      
+      th, td {
+        padding: 0.5rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 10px;
+      }
+      
+      .header-content {
+        gap: 0.5rem;
+      }
+      
+      .logo {
+        font-size: 1.2rem;
+      }
+      
+      h1 {
+        font-size: 1.3rem;
+      }
+      
+      .subtitle {
+        font-size: 0.8rem;
+      }
+      
+      .overview {
+        font-size: 0.7rem;
+      }
+      
+      h2 {
+        font-size: 1.3rem;
+      }
+      
+      h3 {
+        font-size: 1.1rem;
+      }
+
+        .image-holder,
+        .image-placeholder {
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .image-holder img,
+        .image-placeholder img {
+            width: 100%;
+            flex: 1 1 100%;
+            height: auto;
+        }
+
+        .image-caption {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+      
+      table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+        <div class="header-content">
+            <div class="logo">Michelle Amanze</div>
+            <div class="title-section">
+                <h1>ShantyBay</h1>
+                <p class="subtitle">Empowering Nigeria's Small Retailers for the Digital Economy</p>
+            </div>
+        </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div>Timeline: 7 days (May 2025) <br>Role: Product Manager/Owner</div>
+      <section>
+        <h2>Overview</h2>
+        <div class="metrics">
+          <p><strong>63%</strong> increase in perceived vendor trustworthiness</p>
+          <p><strong>2.5x</strong> higher purchase intent among test users</p>
+          <p><strong>$13B</strong> market opportunity in Nigeria's e-commerce sector</p>
+        </div>
+        
+        <h3>Problem</h3>
+        <p>Small retailers in Nigeria's urban and peri-urban areas lack accessible digital commerce solutions that integrate inventory management, payments, and delivery logistics, preventing them from participating in the growing digital economy.</p>
+        
+        <h3>Solution</h3>
+        <p>A mobile-first marketplace platform that enables traditional retailers to create digital storefronts, manage inventory, process payments, and coordinate deliveries through an intuitive, trust-centric interface.</p>
+      </section>
+
+      <section>
+        <h2>Market Context & Selection</h2>
+        <p>I selected Nigeria's retail market as an unfamiliar but high-potential opportunity. Nigeria represents Africa's largest economy with over 200 million people, where 80% of retail transactions still occur through informal markets despite rapid digital infrastructure growth.</p>
+        
+        <h3>Key Market Indicators</h3>
+        <ul>
+          <li>E-commerce market: $13B (2023), growing at 14.5% CAGR</li>
+          <li>Internet penetration: 110M users (50%+ population)</li>
+          <li>Mobile payment growth: 78% YoY increase (2022-2023)</li>
+          <li>Smartphone adoption: 40% and climbing</li>
+        </ul>
+        
+        <p>The market selection revealed a critical gap: while digital solutions exist for formal urban merchants, independent local retailers remain underserved despite representing the economy's backbone.</p>
+      </section>
+
+      <section>
+        <h2>Problem Discovery & Research</h2>
+        
+        <h3>Research Methodology</h3>
+        <p>I conducted user research using a human-centered design approach over 2 days:</p>
+        
+        <div class="highlight">
+          <h4>Primary Research:</h4>
+          <ul>
+            <li>6 semi-structured stakeholder interviews (10-30 minutes each)</li>
+            <li>Contextual inquiry observing current workflows</li>
+            <li>Cross-segment validation across urban and semi-urban areas</li>
+          </ul>
+          
+          <h4>Participant Breakdown:</h4>
+          <ul>
+            <li>4 Small business owners (ages 30-55, mixed gender)</li>
+            <li>1 Regular online shopper (age 28, female, Lagos)</li>
+            <li>1 Delivery driver (age 32, male, urban area)</li>
+          </ul>
+        </div>
+
+        <h3>Key Findings</h3>
+        <p>Research revealed four critical pain points affecting local commerce:</p>
+        
+        <h4>Manual Inventory Management</h4>
+        <div class="quote">
+          "I use a notebook for everything. I don't even know what I'm out of until it's too late." - Adebayo, Shop Owner
+        </div>
+        <p>Impact: Missed sales opportunities, inefficient restocking</p>
+        
+        <h4>Low Social Media ROI</h4>
+        <p>High activity but poor conversion rates and expensive, complex logistics on existing platforms</p>
+        
+        <h4>Payment & Delivery Friction</h4>
+        <div class="quote">
+          "Bank transfers waste time and scare customers" - Folake, Vendor
+        </div>
+        <p>Insecure payment methods and poor delivery coordination</p>
+        
+        <h4>Digital Literacy Barriers</h4>
+        <p>Non-intuitive tools rejected by busy merchants. High workload requires immediate utility for adoption</p>
+
+        <h3>Problem Statement</h3>
+        <p><strong>Target Users:</strong> Independent retailers with 1-5 employees who sell physical goods, have smartphone access, but lack integrated, accessible, and affordable retail tech solutions.</p>
+        <p><strong>Core Problem:</strong> Small retailers cannot participate in Nigeria's growing digital economy due to fragmented tools and high barriers to entry, resulting in 40% annual revenue growth losses and elevated customer stress from uncertain product availability.</p>
+      </section>
+
+      <section>
+        <h2>Solution Development & Ideation</h2>
+        
+        <h3>Solution Exploration</h3>
+        <p>I generated and evaluated 5 solution concepts using an Impact vs. Feasibility matrix:</p>
+        
+        <h4>Top Solutions:</h4>
+        <ul>
+          <li><strong>ShantyBay</strong> - Comprehensive marketplace platform (Score: 31/40)</li>
+          <li><strong>RetailConnect</strong> - B2B wholesale connector (Score: 28/40)</li>
+          <li><strong>PayTrack</strong> - Payment-focused solution (Score: 28/40)</li>
+        </ul>
+        
+        <p><strong>Decision Rationale:</strong> ShantyBay offered the strongest network effects and revenue diversity despite requiring higher initial investment.</p>
+
+        <h3>Design Principles</h3>
+        <p>Three core principles guided development:</p>
+        <ul>
+          <li>Mobile-first, low-barrier design for vendors with limited digital skills</li>
+          <li>Trust-centric architecture with reviews, verification, and direct communication</li>
+          <li>Seamless integration of inventory, payments, and logistics through local partnerships</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>MVP Development & Testing</h2>
+        
+        <h3>Core Feature Set</h3>
+        <p>Based on user feedback, I prioritized these MVP features:</p>
+        
+        <h4>For Vendors:</h4>
+        <ul>
+          <li>Photo-based storefront setup</li>
+          <li>Inventory alerts and basic analytics</li>
+          <li>Multi-channel payment integration</li>
+          <li>Delivery coordination system</li>
+        </ul>
+        
+        <h4>For Customers:</h4>
+        <ul>
+          <li>Direct messaging with vendors</li>
+          <li>Trust mechanisms (reviews, verification)</li>
+          <li>Real-time inventory visibility</li>
+          <li>Secure checkout process</li>
+        </ul>
+
+        <h3>Prototype Development</h3>
+        <p>I created low-fidelity prototypes using Canva, focusing on the critical Vendor Profile Screen as the primary trust-building touchpoint.</p>
+        
+        <div class="image-holder">
+          <img src="Project 4/1.png"> <img src="Project 4/2.png"> <img src="Project 4/3.png"> <img src="Project 4/4.png"> <img src="Project 4/5.png"> <img src="Project 4/6.png"> <img src="Project 4/7.png">
+        </div>
+        <p class="image-caption">Mockups</p>
+
+        <h3>User Testing & Iteration</h3>
+        <p><strong>Objective:</strong> Validate whether the design addressed core user concern around trust in local vendors.</p>
+        
+        <p><strong>Testing Method:</strong></p>
+        <ul>
+          <li>3 user testing sessions with target customers</li>
+          <li>Focus on Vendor Profile Screen interactions</li>
+          <li>Pre/post trust perception measurements</li>
+        </ul>
+
+        <h4>Key Insights:</h4>
+        <ul>
+          <li>Users demanded transparency: "lack of transparency = lack of trust"</li>
+          <li>Need for business credibility signals beyond basic contact info</li>
+          <li>Stock visibility critical for purchase decisions</li>
+        </ul>
+
+        <h3>Design Iterations</h3>
+        <p>Based on testing feedback, I implemented these enhancements:</p>
+        
+        <table>
+          <thead>
+            <tr>
+              <th>Pain Point</th>
+              <th>Original Design</th>
+              <th>Post-Iteration Enhancement</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Business credibility</td>
+              <td>Just vendor name/logo</td>
+              <td>CAC registration number, years in business, completed orders</td>
+            </tr>
+            <tr>
+              <td>Trust signals</td>
+              <td>No reviews/context</td>
+              <td>Recent customer reviews with real names and ratings</td>
+            </tr>
+            <tr>
+              <td>Stock clarity</td>
+              <td>No inventory indicator</td>
+              <td>Live inventory status (in-stock/out-of-stock)</td>
+            </tr>
+            <tr>
+              <td>Communication</td>
+              <td>Hidden contact links</td>
+              <td>Prominent call and message buttons</td>
+            </tr>
+            <tr>
+              <td>Transparency</td>
+              <td>Sparse vendor info</td>
+              <td>Business hours, response time, "About vendor" section</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <div class="image-placeholder">
+          <img src="Project 4/8.png"> <img src="Project 4/9.png">
+        </div>
+        <p class="image-caption">Before and after design iterations</p>
+      </section>
+
+      <section>
+        <h2>Impact</h2>
+        
+        <div class="metrics">
+          <p><strong>63%</strong> increase in perceived vendor trustworthiness</p>
+          <p><strong>2.5x</strong> higher likelihood to place orders</p>
+          <p><strong>100%</strong> of testers indicated they would use messaging feature</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Product Strategy & Roadmap</h2>
+        
+        <h3>Success Metrics</h3>
+        <h4>Primary KPIs:</h4>
+        <ul>
+          <li>Monthly Active Vendors (MAV)</li>
+          <li>Customer Acquisition Cost (CAC)</li>
+          <li>Gross Merchandise Value (GMV)</li>
+          <li>Vendor-to-customer conversion rate</li>
+        </ul>
+        
+        <h4>Secondary Metrics:</h4>
+        <ul>
+          <li>Time to first sale for new vendors</li>
+          <li>Customer retention rate</li>
+          <li>Average order value</li>
+          <li>Platform trust score</li>
+        </ul>
+
+        <h3>6-12 Month Roadmap</h3>
+        <h4>Phase 1 (Months 1-3): Foundation & Growth</h4>
+        <ul>
+          <li>Scale to 5 additional Nigerian cities</li>
+          <li>Reach 10,000+ consumer connections</li>
+          <li>Integrate escrow payment system</li>
+        </ul>
+        
+        <h4>Phase 2 (Months 4-6): Enhancement & Retention</h4>
+        <ul>
+          <li>Launch vendor analytics dashboard</li>
+          <li>Implement review response system</li>
+          <li>Pilot localized marketing campaigns</li>
+        </ul>
+        
+        <h4>Phase 3 (Months 7-12): Expansion & Monetization</h4>
+        <ul>
+          <li>Multilingual support (Yoruba, Igbo, Hausa)</li>
+          <li>Vendor subscription tiers with premium features</li>
+          <li>Offline-first capabilities for unstable internet areas</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Key Learnings & Retrospective</h2>
+        
+        <h3>Critical Success Factors</h3>
+        <ul>
+          <li><strong>Trust is Non-Negotiable:</strong> Verified vendors saw 3x more consumer interactions than unverified ones</li>
+          <li><strong>Simplicity Drives Adoption:</strong> Users preferred clear navigation over complex features</li>
+          <li><strong>Human Touch Required:</strong> Automated onboarding insufficient; hybrid approach needed</li>
+          <li><strong>Infrastructure Resilience:</strong> Internet instability requires offline-first planning</li>
+        </ul>
+
+        <h3>Challenges & Mitigation</h3>
+        <h4>Challenge: Low digital literacy among target vendors</h4>
+        <p><strong>Mitigation:</strong> Implemented hybrid onboarding with community ambassadors</p>
+        
+        <h4>Challenge: Infrastructure limitations affecting real-time features</h4>
+        <p><strong>Solution:</strong> Prioritized offline-first capabilities and caching mechanisms</p>
+
+        <h3>Future Considerations</h3>
+        <ul>
+          <li>Expansion to other West African markets</li>
+          <li>Integration with existing mobile money providers</li>
+          <li>Partnership opportunities with logistics companies</li>
+          <li>Potential for B2B wholesale marketplace features</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Results & Impact</h2>
+        
+        <div class="highlight">
+          <h4>Quantitative Results:</h4>
+          <ul>
+            <li>63% increase in perceived vendor trustworthiness</li>
+            <li>2.5x higher purchase intent among test users</li>
+            <li>100% of testers engaged with messaging features</li>
+            <li>Validated problem-solution fit within 7-day timeline</li>
+          </ul>
+          
+          <h4>Qualitative Impact:</h4>
+          <ul>
+            <li>Clear path to market for underserved vendor segment</li>
+            <li>Framework for trust-building in informal markets</li>
+            <li>Validated mobile-first approach for emerging market commerce</li>
+          </ul>
+        </div>
+        
+        <p><strong>Business Case:</strong> ShantyBay addresses a $13B market opportunity with 14.5% annual growth, targeting millions of underserved retailers across Nigeria.</p>
+
+        <h3>Skills Demonstrated</h3>
+        <p>Market research, user-centered design, rapid prototyping, data-driven decision making, strategic roadmap planning</p>
+      </section>
+
+        <div class="links">
+            <h3>Supporting Documents</h3>
+            <a href="https://docs.google.com/document/d/1j0GHYQ6elRfGcP3jVxGUGzTgRY48Ypms-RN9OJEV5XU/edit?usp=sharing" target="_blank">Problem Definition and Solution Mapping</a>
+            <a href="https://forms.gle/e8VzsrbNGPmWNZ1XA" target="_blank">User Research Survey Form</a>
+            <a href="https://docs.google.com/document/d/1NQGYOLHk-g6q-2Hh7P-REliFAJBw1IgjMAqY2q7TCbc/edit?usp=sharing" target="_blank">User Research Document: ShantyBay</a>
+            <a href="https://docs.google.com/document/d/1oLJZcgIgozFlq_PkPatrfRnSxtqovdFkN6P_npqM55E/edit?usp=sharing" target="_blank">Interviews Summary</a>
+            <a href="https://docs.google.com/document/d/1QxZFaRpBAmYQ0-ZSreKv2RGV2_fijqdNodH444p9yAM/edit?usp=sharing" target="_blank">Market Research and Competitor Analysis: ShantyBay</a>
+            <a href="https://docs.google.com/document/d/11sY0UmEqe18j1hDNecnoLgPtM1cBaE-lxt80U-fkM6o/edit?usp=sharing" target="_blank">Product Requirements Document (PRD)</a>
+            <a href="https://docs.google.com/document/d/1_sgV7tFO72ng2BXrixMl7nP0Fyh4B_JkUqK8BMcOeBU/edit?usp=sharing" target="_blank">Product Roadmap</a>
+            <a href="https://www.canva.com/design/DAGoXyryAjM/zpJcj2dFtxE0X4d6FhSvGg/edit?utm_content=DAGoXyryAjM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">Prototype: Canva: Visual Suite for Everyone</a>
+            <a href="https://forms.gle/YkRMwFFtfoquBcf36" target="_blank">Prototype Test Questionnaire</a>
+            <a href="https://docs.google.com/document/d/1yIA9tXazvRvZQf7t7uodd5vciv655CkuDZZkq3jSGI0/edit?usp=sharing" target="_blank">Prototype Testing Results</a>
+            <a href="https://docs.google.com/document/d/1f6rDVMj5gmkv_JcjhixPslgG9pyyafbdft8RweaVTik/edit?usp=sharing" target="_blank">RFC: Vendor Profile Enhancements</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Michelle Amanze</p>
+    </div>
+  </footer>
+</body>
+</html>
