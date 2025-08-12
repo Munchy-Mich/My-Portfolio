@@ -37,16 +37,12 @@
       gap: 2rem;
     }
     
-    .logo {
-      color: white;
-      font-size: 1.5rem;
-      font-family: 'great vibes', cursive;
-      font-weight: bold;
-      white-space: nowrap;
-      letter-spacing: 2px;
+    .logo img {
+      width: 250px;
+      height: auto;
       position: absolute;
-      top: 10px;
-      left: 10px;
+      top: 5px;
+      left: 5px;
       padding: 0;
     }
     
@@ -66,11 +62,12 @@
     .subtitle {
       font-size: 1rem;
       margin-bottom: 1rem;
+      justify-content: center;
     }
     
-    .overview {
+    /* .overview {
       font-size: 0.9rem;
-    }
+    } */
     
     /* Main Content */
     main {
@@ -215,10 +212,10 @@
         gap: 1rem;
       }
 
-      .logo {
-        font-size: 1.3rem;
-        top: 0;
-        left: 0;
+      .logo img {
+        width: 200px;  
+        top: 0px;   
+        left: 0px;  
       }
       
       h1 {
@@ -264,11 +261,10 @@
         gap: 0.5rem;
       }
       
-      .logo {
-        font-size: 1rem;
-        top: 0;
-        left: 0;
-        letter-spacing: 1px;
+      .logo img {
+        width: 160px;  
+        top: -5px;   
+        left: -5px;  
       }
       
       h1 {
@@ -310,9 +306,12 @@
   <header>
     <div class="container">
       <div class="header-content">
-        <div class="logo">Michelle Amanze</div>
+        <div class="logo">
+          <img src="Logo.JPG">
+        </div>
         <div class="title-section">
-          <h1>TruthCheck: Combating Misinformation in Nigeria</h1>
+          <h1>TruthCheck</h1>
+          <p class="subtitle">Combating Misinformation in Nigeria</p>
         </div>
       </div>
     </div>
@@ -321,7 +320,6 @@
   <main>
     <div class="container">
 
-        <p class="subtitle">Information Verification & Media Technology Solution</p>
           <div class="overview">
             <strong>Role:</strong> Product Owner/Manager <br><strong>Duration:</strong> 5-day sprint (April 2025) <br><strong>Team Size:</strong> 24 cross-functional members
           </div>
