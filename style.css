@@ -399,6 +399,11 @@ footer {
     color: #db0746;
 }
 
+.footer-icon svg path {
+    fill: #fff !important;
+}
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-container nav {
